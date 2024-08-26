@@ -1,13 +1,32 @@
 # SQL-Sales-Data-Analysis
-## Snowflake Shceme 
-+ A new date dimension for time analysis.
-+ Summarized Order & OrderItem in SalesFact.
-+ SalesFact holds foreign keys for each dimesion table except supplier.
-## Analysis Queries
-Those queries explore every ensight in this data :
-+ Through time (Quarters, WeekDays, Months)
-+ Products (Suppliers, Price change, Production location)
-+ Customers (Their locations, Their value, relation between revenues and order counts) 
 
+## Snowflake Schema
+
+**Data Model Enhancements:**
+
+* **Date Dimension:** Added a dedicated date dimension for granular time-based analysis.
+* **Fact Table Optimization:** Summarized order and order item information in a `SalesFact` table for efficient querying.
+* **Normalized Data:** `SalesFact` contains foreign keys to related dimension tables (except supplier) promoting data integrity and flexibility.
+
+## Analysis Queries
+
+**Key Insights Explored:**
+
+* **Time-Based Analysis:**
+  * Quarterly trends
+  * Weekday performance
+  * Monthly fluctuations
+* **Product Analysis:**
+  * Supplier performance
+  * Price change impact
+  * Production location analysis
+* **Customer Analysis:**
+  * Customer location insights
+  * Customer value segmentation
+  * Correlation between revenue and order counts
+
+****Visualization:****
+
+*  Take a look on this Repo => [PowerBI_Dashboard_SQL_Analysis](https://github.com/LilHuss26/PowerBI_Dashboard_SQL_Analysis) .
 
 
