@@ -1,9 +1,9 @@
+create view country_Stats as
 select c.Country,c.city,CustomerID,
 count(OrderID) as orders,
 sum(TotalAmount) as Total_Amount from SalesFact
 inner join CustmerDim c on c.Id = CustomerID
-group by CustomerID,c.City,c.Country
-order by Total_Amount desc;
+group by CustomerID,c.City,c.Country;
 
 select c.Country,CustomerID, count(OrderID) as orders, sum(TotalAmount) as Total_Amount from SalesFact
 inner join CustmerDim c on c.Id = CustomerID

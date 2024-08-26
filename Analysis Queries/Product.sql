@@ -5,7 +5,7 @@ inner join ProductDim p on SalesFact.ProductID = p.Id
 group by ProductID,SupplierId;
 
 select * from Product_INF
-order by product_Amount desc
+order by Time_Ordered desc
 -----------------------------------
 -----------------------------------
 select ProductID,
@@ -29,6 +29,7 @@ from SalesFact
 group by ProductID;
 -------------------------------
 -------------------------------
+create view Product_Change as
 SELECT
   sf.ProductID,
   COUNT(*) AS Time_Ordered,
@@ -38,7 +39,7 @@ SELECT
   (
     SELECT CASE 
       WHEN MAX(UnitPrice) - MIN(UnitPrice) > 0
-	  THEN MIN(UnitPrice) / (MAX(UnitPrice) - MIN(UnitPrice))
+	  THEN (MAX(UnitPrice) - MIN(UnitPrice)) / MIN(UnitPrice)
       ELSE 0
     END AS ratio
     FROM SalesFact AS sf2
@@ -46,15 +47,15 @@ SELECT
   ) AS change_ratio
 FROM SalesFact sf
 INNER JOIN ProductDim p ON sf.ProductID = p.Id
-GROUP BY sf.ProductID, p.SupplierId
-ORDER BY Time_Ordered DESC;
+GROUP BY sf.ProductID, p.SupplierId;
 -----------------------------------
 -----------------------------------
+
+create view Supplier_stats as 
 select p.SupplierId,s.City,s.Country,
 sum(p.product_Amount) as product_Amount from Product_INF p
 inner join SupplierDim s on s.Id = p.SupplierId
-group by p.SupplierId,s.City,s.Country
-order by product_Amount desc
+group by p.SupplierId,s.City,s.Country;
 
 select p.SupplierId,s.Country,sum(p.product_Amount) as product_Amount from Product_INF p
 inner join SupplierDim s on s.Id = p.SupplierId

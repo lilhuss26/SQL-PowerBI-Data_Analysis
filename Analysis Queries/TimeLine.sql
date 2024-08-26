@@ -38,6 +38,7 @@ GROUP BY d.Year,q.Quarter
 having q.Quarter = 1 or q.Quarter = 2  
 order by Total desc;
 
+create view Week_day as
 select d.DayName, sum(s.TotalAmount)as Total FROM SalesFact s
 inner join DateDim d on CONVERT(date, s.OrderDate) = d.FullDate 
 GROUP BY d.DayName
