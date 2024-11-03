@@ -27,8 +27,3 @@
   * Customer value segmentation
   * Correlation between revenue and order counts
 
-****Visualization:****
-
-*  Take a look on this Repo => [PowerBI_Dashboard_SQL_Analysis](https://github.com/LilHuss26/PowerBI_Dashboard_SQL_Analysis) .
-
-
