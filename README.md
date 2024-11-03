@@ -3,7 +3,7 @@ This Power BI dashboard visualizes the insights discovered on the [SQL Analysis]
 # Data 
 You can take a look at the [data](https://github.com/LilHuss26/SQL-PowerBI-Data_Analysis/tree/main/SQL-Analysis/Data) and the [queries](https://github.com/LilHuss26/SQL-PowerBI-Data_Analysis/tree/main/SQL-Analysis/Analysis%20Queries) where the used `views` are created.
 # Dashboard
-![image](https://github.com/user-attachments/assets/96197ead-9036-4979-b729-1bb7ff96f2cd)
+![{7A22DE3E-C9C2-41B4-83DE-06D8FEEB613B}](https://github.com/user-attachments/assets/a148d53a-a415-4c98-afb4-feba9797e36a)
 ## Elements
 ### Cards
 + Top Metrics summarize
